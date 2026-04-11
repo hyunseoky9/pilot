@@ -16,13 +16,9 @@ def avgperformance(env, config, policy_printout=False,printout = False):
     num_episodes = config['num_episodes']
     if policytype == 0: # Value iteration
         print( 'policy type: value iteration')
-        with open(f'./value_iteration/VI_controller_setting{config["VIenvsetting"]}.pkl', 'rb') as f:
+        with open(f'./VI_policy_setting{env.settingID}.pkl', 'rb') as f:
             ctrl = pickle.load(f)
         Policy = ctrl['policy']
-        # reinitiate the environment
-        settings = ctrl['envinfo']
-        print(settings)
-        env = pprdyn1(settings)
     elif policytype == 1: # rolling E utility optimization on next year's returns
         print( 'policy type: rolling E utility optimization on next year returns')
     elif policytype == 2: # static E utility optimization on final timestep not updating the belief(all mpt papers)
@@ -32,7 +28,10 @@ def avgperformance(env, config, policy_printout=False,printout = False):
     elif policytype == 4: # rolling E utility optimization on next year's returns not updating the belief
         print( 'policy type: static E utility optimization on next year returns not updating the belief')
     elif policytype == 5: # VI policy trained with constant belief.
-        
+        print( 'policy type: VI policy trained with constant belief')
+        with open(f'./VI_fixedbelief_policy_setting{env.settingID}.pkl', 'rb') as f:
+            ctrl = pickle.load(f)
+        Policy = ctrl['policy']
 
     if policytype in [1,2,3,4]:
         best_wmat = env.build_best_weight_matrices() # best allocation matrices for each belief state and timestep
@@ -55,7 +54,7 @@ def avgperformance(env, config, policy_printout=False,printout = False):
         tt=0
         while not done:
             if policytype == 0:
-                actionidx = _act(env, Policy, input)
+                actionidx = Policy[int(env.state[env.sidx['t']]), env.Aidx, env.bidx]
             elif policytype == 1:
                 actionidx = best_wmat[env.bidx, int(env.state[env.sidx['t']])+1]
             elif policytype == 2:
@@ -64,6 +63,8 @@ def avgperformance(env, config, policy_printout=False,printout = False):
                 actionidx = best_wmat[env.bidx, -1]
             elif policytype == 4:
                 actionidx = best_wmat[env.b_states.shape[0]-1, int(env.state[env.sidx['t']])+1]
+            elif policytype == 5:
+                actionidx = Policy[int(env.state[env.sidx['t']]), env.Aidx]
             #allocations[i,int(env.state[env.sidx['t']])] = env.w_states[actionidx]
             #portfolios[i,int(env.state[env.sidx['t']])] = env.state[env.sidx['A']]
             if printout:

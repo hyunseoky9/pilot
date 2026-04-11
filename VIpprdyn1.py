@@ -116,6 +116,85 @@ class VIpprdyn1(pprdyn1):
             pickle.dump(output, f)
         return policy, V[:self.T]
 
+
+    def value_iteration_fixed_belief(self):
+        """
+        Value iteration with belief fixed at uniform prior throughout.
+        State is (t, A_t) only — no belief tracking.
+        This is the dynamic version of policy 4: forward-looking but no learning.
+        """
+        print(f"Running fixed-belief value iteration (setting={self.settingID})...")
+        start_time = time.time()
+        
+        policy = np.zeros((self.T, self.n_A_states), dtype=int)
+        V = np.zeros((self.T + 1, self.n_A_states))
+        
+        scaled_wi = self.WI_3D * np.pi ** (-1.5)
+        b_probs = np.ones(self.n_scenario) / self.n_scenario  # fixed uniform
+        
+        for t in reversed(range(self.T)):
+            print(f"  t={t}")
+            
+            # Precompute returns per scenario: (n_scenario, 8000, 3)
+            returns_per_s = np.zeros((self.n_scenario, self.XI_3D.shape[0], self.n_region))
+            for s in range(self.n_scenario):
+                mu_s = self.multi_timestep_returns[t + 1, :, s]
+                returns_per_s[s] = self.compute_lognormal_returns(mu_s)
+            
+            # Precompute A_next_idx: (n_A, n_w)
+            A_next_idx = np.zeros((self.n_A_states, self.n_w_states), dtype=int)
+            for a in range(self.n_A_states):
+                A_next_all = t / (t + 1) * self.A_states[a] + 1 / (t + 1) * self.w_states
+                dists = np.linalg.norm(
+                    self.A_states[:, None, :] - A_next_all[None, :, :], axis=2
+                )
+                A_next_idx[a] = np.argmin(dists, axis=0)
+            
+            # Precompute rewards: (n_A, n_scenario, 8000)
+            port_returns = np.zeros((self.n_A_states, self.n_scenario, self.XI_3D.shape[0]))
+            for s in range(self.n_scenario):
+                port_returns[:, s, :] = (t + 1) * (self.A_states @ returns_per_s[s].T)
+            
+            port_returns = np.maximum(port_returns, 1e-300)
+            if self.gamma == 1:
+                rewards_all = np.log(port_returns)
+            else:
+                rewards_all = port_returns ** (1 - self.gamma) / (1 - self.gamma)
+            
+            for a in range(self.n_A_states):
+                a_next = A_next_idx[a]  # (n_w,)
+                
+                # Gather rewards: (n_w, n_scenario, 8000)
+                r_w = rewards_all[a_next]
+                
+                # Continuation: no belief dimension, just (n_w, n_scenario, 8000)
+                # V[t+1] is (n_A,), so V[t+1, a_next[w]] is the same for all s and k
+                cont_w = V[t + 1, a_next]  # (n_w,)
+                
+                # Integrate over quadrature points: (n_w, n_scenario)
+                expected_per_s = r_w @ scaled_wi  # (n_w, n_scenario)
+                
+                # Add discounted continuation (same for all s and k)
+                expected_per_s += self.beta * cont_w[:, None]
+                
+                # Weight by belief over scenarios: (n_w,)
+                V_w = expected_per_s @ b_probs
+                
+                V[t, a] = np.max(V_w)
+                policy[t, a] = np.argmax(V_w)
+            
+            print(f"    t={t} done")
+        
+        elapsed = time.time() - start_time
+        print(f"Fixed-belief VI completed in {elapsed / 60:.2f} minutes.")
+        
+        output = {'policy': policy, 'value_function': V[:self.T]}
+        with open(f"VI_fixedbelief_policy_setting{self.settingID}.pkl", "wb") as f:
+            pickle.dump(output, f)
+        
+        return policy, V[:self.T]
+    
+
     def compute_belief_transition(self, s, i, t):
         '''
         Compute the probability of transitioning from belief state i to belief state j
