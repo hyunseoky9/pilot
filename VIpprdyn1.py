@@ -36,7 +36,7 @@ class VIpprdyn1(pprdyn1):
             for t in range(self.T):
                 for i in range(self.n_b_states):
                     btransmat[s, t, i] = self.compute_belief_transition(s,i,t)
-        
+
         # save numpy array of precomputed belief transitions
         np.save(f"belief_transitions_setting{self.settingID}.npy", btransmat)
         end_time = time.time()
@@ -70,7 +70,7 @@ class VIpprdyn1(pprdyn1):
             # Precompute rewards for all (a, s): (n_A, n_scenario, 8000)
             port_returns = np.zeros((self.n_A_states, self.n_scenario, self.XI_3D.shape[0]))
             for s in range(self.n_scenario):
-                port_returns[:, s, :] = (t + 1) * (self.A_states @ returns_per_s[s].T)  # (n_A, 8000)
+                port_returns[:, s, :] = (t + 1) * (self.A_states @ returns_per_s[s].T)  if self.bnorm == 0 else (self.A_states @ returns_per_s[s].T) # (n_A, 8000)
             
             port_returns = np.maximum(port_returns, 1e-300)
             if self.gamma == 1:
@@ -153,7 +153,7 @@ class VIpprdyn1(pprdyn1):
             # Precompute rewards: (n_A, n_scenario, 8000)
             port_returns = np.zeros((self.n_A_states, self.n_scenario, self.XI_3D.shape[0]))
             for s in range(self.n_scenario):
-                port_returns[:, s, :] = (t + 1) * (self.A_states @ returns_per_s[s].T)
+                port_returns[:, s, :] = (t + 1) * (self.A_states @ returns_per_s[s].T) if self.bnorm == 0 else (self.A_states @ returns_per_s[s].T) # (n_A, 8000)
             
             port_returns = np.maximum(port_returns, 1e-300)
             if self.gamma == 1:

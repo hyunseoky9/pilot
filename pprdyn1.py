@@ -23,6 +23,7 @@ class pprdyn1:
         self.beta = params['beta'].iloc[envsetting]
         self.gamma = params['gamma'].iloc[envsetting]
         self.central_adjustment = params['centraladj'].iloc[envsetting]
+        self.bnorm = params['bnorm'].iloc[envsetting] # budget normalization
         self.n_region = 3
         self.n_scenario = 4
 
@@ -155,7 +156,8 @@ class pprdyn1:
         b_next = self.b_states[bidx_next]
 
         # define reward and done
-        totreturns = (t+1) * np.dot(A_next, returns)
+        totreturns = (t+1) * np.dot(A_next, returns) if self.bnorm == 0 else np.dot(A_next, returns) # optionally normalize by budget to make rewards more comparable across settings with different budgets
+
         if self.gamma == 1:
             reward = np.log(totreturns)
         elif self.gamma < 1:
