@@ -10,7 +10,7 @@ from utilitysolver import utilitysolver
 
 #from VI_pprdyn1 import _act, build_optimal_controller_fully_observable
 #import torch
-def avgperformance(env, config, policy_printout=False,printout = False):
+def avgperformance(env, config, policy_printout=False,printout = False,collect_data = False):
     #device = torch.device('cpu')  # Force CPU usage
     policytype = config['policytype']
     num_episodes = config['num_episodes']
@@ -37,8 +37,10 @@ def avgperformance(env, config, policy_printout=False,printout = False):
         best_wmat = env.build_best_weight_matrices() # best allocation matrices for each belief state and timestep
 
     rewards = []
-    #allocations = np.zeros((num_episodes, env.T, env.n_region))
-    #portfolios = np.zeros((num_episodes, env.T, env.n_region))
+    if collect_data:
+        allocations = np.zeros((num_episodes, env.T, env.n_region))
+        portfolios = np.zeros((num_episodes, env.T, env.n_region))
+        states = np.zeros((num_episodes, env.T, env.state.shape[0]))
     betas = env.beta ** np.arange(env.T)
     log_betas = np.log(env.beta) * np.arange(env.T)
     K = np.sum(betas)
@@ -65,11 +67,13 @@ def avgperformance(env, config, policy_printout=False,printout = False):
                 actionidx = best_wmat[env.b_states.shape[0]-1, int(env.state[env.sidx['t']])+1]
             elif policytype == 5:
                 actionidx = Policy[int(env.state[env.sidx['t']]), env.Aidx]
-            #allocations[i,int(env.state[env.sidx['t']])] = env.w_states[actionidx]
-            #portfolios[i,int(env.state[env.sidx['t']])] = env.state[env.sidx['A']]
             if printout:
                 print(f't: {env.state[env.sidx["t"]]}, allocation: {env.w_states[actionidx]}')
             tt += 1
+            if collect_data:
+                states[i,int(env.state[env.sidx['t']])] = env.state
+                allocations[i,int(env.state[env.sidx['t']])] = env.w_states[actionidx]
+                portfolios[i,int(env.state[env.sidx['t']])] = env.state[env.sidx['A']]
             obs, reward, done, info = env.step(actionidx)
             input = env.obs.copy()
             ep_reward.append(reward)
@@ -95,8 +99,14 @@ def avgperformance(env, config, policy_printout=False,printout = False):
         logA = np.log(env.gamma - 1) + log_negV - logK
         logce = logA / (1- env.gamma)
         ce = np.exp(logce)
-    summary = {'rewards': rewards}  # 'allocations': allocations, 'portfolios': portfolios}
-    
+    summary = {'rewards': rewards}
+    summary['certainty_equivalent'] = ce
+    if collect_data:
+        summary['allocations'] = allocations
+        summary['portfolios'] = portfolios
+        summary['states'] = states
+
+
     
     print(f'Average reward over {num_episodes} episodes: {np.mean(rewards):.4f}, certrainty equivalent: {ce:.4f}')
     return summary

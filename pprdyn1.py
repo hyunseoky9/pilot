@@ -1,3 +1,4 @@
+from numpy.polynomial.hermite import hermgauss
 from scipy.special import logsumexp
 from scipy.stats import norm
 import numpy as np
@@ -89,6 +90,13 @@ class pprdyn1:
         self.n_w_states = self.w_states.shape[0]
 
         # Precompute best portfolio choice for each (belief state, timestep).
+        ## define quadrature approximation points and weights for the lognormal distribution of returns
+        self.N_QUAD_1D = 20
+        self.XI_1D, self.WI_1D = hermgauss(self.N_QUAD_1D)
+        self.XI_3D = np.array(np.meshgrid(self.XI_1D, self.XI_1D, self.XI_1D)).T.reshape(-1, 3)  # (8000, 3)
+        self.WI_3D = np.outer(np.outer(self.WI_1D, self.WI_1D).ravel(), self.WI_1D).ravel()      # (8000,)
+        self.scaled_wi = self.WI_3D / np.sqrt(np.pi)**3  # scale weights for 3D quadrature
+
         self.best_weight_idx_matrix = self.build_best_weight_matrices()
 
         # initialize
@@ -170,8 +178,11 @@ class pprdyn1:
     def best_weight(self, probidx, t):
         probs = self.b_states[probidx]
         returns_t = self.multi_timestep_returns[int(t)]
+        #_, best_idx = self.max_utility_discrete(returns_t, probs, self.w_states)
         _, best_idx = self.max_utility_discrete(returns_t, probs, self.w_states)
+        
         return best_idx
+
 
     def build_best_weight_matrices(self):
         '''
@@ -180,15 +191,38 @@ class pprdyn1:
         that maximizes expected utility given belief state probidx at timestep t.
         To use, at timestep t you must use the current belief and t+1 to get the best weight for timestep t's allocation decision.
         '''
-        best_idx = np.zeros((self.n_b_states, self.T + 1), dtype=int)
+        bw = np.zeros((self.n_b_states, self.T + 1), dtype=int)
+        for t in range(self.T + 1):
+            mu = self.multi_timestep_returns[int(t)]                              # (R, S)
+            log_mu = np.log(np.maximum(mu, 1e-10))
+            log_r = (log_mu.T[:, None, :] - 0.5 * self.sig**2
+                    + self.sig * np.sqrt(2) * self.XI_3D[None, :, :])             # (S, K, R)
+            r = np.exp(log_r)
+            port = np.einsum('ar,skr->ask', self.w_states, r)                     # (W, S, K)
+            port = np.maximum(port, 1e-300)
+            if np.isclose(self.gamma, 1.0):
+                u = np.log(port)
+            else:
+                u = port ** (1 - self.gamma) / (1 - self.gamma)
+            eu_per_s = u @ self.scaled_wi                                          # (W, S)
+            eu_all   = eu_per_s @ self.b_states.T                                  # (W, B)
+            bw[:, t] = np.argmax(eu_all, axis=0)
+        return bw
 
-        for probidx in range(self.n_b_states):
-            for t in range(self.T + 1):
-                idx = self.best_weight(probidx, t)
-                best_idx[probidx, t] = idx
-        return best_idx
-
-
+    #def build_best_weight_matrices(self):
+    #    '''
+    #    Build a matrix of the best weight indices for each belief state and timestep.
+    #    Each entry best_idx[probidx, t] gives the index of the weight vector in self.w_states
+    #    that maximizes expected utility given belief state probidx at timestep t.
+    #    To use, at timestep t you must use the current belief and t+1 to get the best weight for timestep t's allocation decision.
+    #    '''
+    #    best_idx = np.zeros((self.n_b_states, self.T + 1), dtype=int)
+#
+    #    for probidx in range(self.n_b_states):
+    #        for t in range(self.T + 1):
+    #            idx = self.best_weight(probidx, t)
+    #            best_idx[probidx, t] = idx
+    #    return best_idx
 
     def max_utility_discrete(self, returns, probs, w_states):
         port_returns = w_states @ returns  # (n_actions, n_scenarios)
