@@ -37,7 +37,7 @@ class pprdyn1:
         self.returnsdata[1] = self.returnsdata[1] - self.central_adjustment # altering central region values to make it more comparable
 
         # reward version (0=for general evaluation, 1=for training RL with actual crra utility)
-        self.for_RL = settings['for_RL']
+        self.for_RL = settings.get('for_RL', 0)
         if self.for_RL == 1:
             self.absref_U = np.abs((settings['ref_R']**(1 - self.gamma))/(1 - self.gamma)) # reference return to divide reward with to keep the numerical scale of rewards more manageable for RL training
             self.R_clip = np.min(self.returnsdata) * np.exp(-0.5*self.sig**2 - 5.4*self.sig) # 5.4 = amount of sd considered in the quadrature approximation. 0.4 lowest mean return 
