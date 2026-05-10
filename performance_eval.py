@@ -40,6 +40,7 @@ def avgperformance(env, config, policy_printout=False,printout = False,collect_d
     if collect_data:
         allocations = np.zeros((num_episodes, env.T, env.n_region))
         portfolios = np.zeros((num_episodes, env.T, env.n_region))
+        portfolioreturn = np.zeros((num_episodes, env.T))
         states = np.zeros((num_episodes, env.T, env.state.shape[0]))
     betas = env.beta ** np.arange(env.T)
     log_betas = np.log(env.beta) * np.arange(env.T)
@@ -75,6 +76,8 @@ def avgperformance(env, config, policy_printout=False,printout = False,collect_d
                 allocations[i,int(env.state[env.sidx['t']])] = env.w_states[actionidx]
                 portfolios[i,int(env.state[env.sidx['t']])] = env.state[env.sidx['A']]
             obs, reward, done, info = env.step(actionidx)
+            if collect_data:
+                portfolioreturn[i,int(env.state[env.sidx['t']])-1] = info['portfolioreturn']
             input = env.obs.copy()
             ep_reward.append(reward)
         ep_reward = np.array(ep_reward)
@@ -93,6 +96,7 @@ def avgperformance(env, config, policy_printout=False,printout = False,collect_d
         V = np.mean(rewards)
         ce = np.exp(V/K)
     else: 
+        # log-sum-exp trick, specifically the max-shift stabilization trick.
         m = np.max(rewards)
         log_negV = np.log(1/len(rewards) * np.sum(np.exp(rewards - m))) + m
         print(f"MC log_negV = {log_negV:.6f}")
@@ -105,8 +109,7 @@ def avgperformance(env, config, policy_printout=False,printout = False,collect_d
         summary['allocations'] = allocations
         summary['portfolios'] = portfolios
         summary['states'] = states
+        summary['portfolioreturn'] = portfolioreturn
 
-
-    
     print(f'Average reward over {num_episodes} episodes: {np.mean(rewards):.4f}, certrainty equivalent: {ce:.4f}')
     return summary

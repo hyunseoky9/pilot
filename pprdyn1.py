@@ -11,9 +11,10 @@ class pprdyn1:
         dynamic version of the PPR model from Mallory and Ando (2014), check out PPR dynamic model for details.
 
         '''
-
+        self.envID = 'pprdyn1'
         envsetting = settings['settingID']
         self.settingID = envsetting
+
         # parameters
         # import csv of parameters
         filename = 'envsetting.csv'
@@ -34,6 +35,12 @@ class pprdyn1:
         [1.10, 1.72, 1.78, 1.96],  # Eastern
         ])  # col 0: historical, col 1-3: future scenarios
         self.returnsdata[1] = self.returnsdata[1] - self.central_adjustment # altering central region values to make it more comparable
+
+        # reward version (0=for general evaluation, 1=for training RL with actual crra utility)
+        self.for_RL = settings['for_RL']
+        if self.for_RL == 1:
+            self.absref_U = np.abs((settings['ref_R']**(1 - self.gamma))/(1 - self.gamma)) # reference return to divide reward with to keep the numerical scale of rewards more manageable for RL training
+            self.R_clip = np.min(self.returnsdata) * np.exp(-0.5*self.sig**2 - 5.4*self.sig) # 5.4 = amount of sd considered in the quadrature approximation. 0.4 lowest mean return 
 
         # get linearly interpolated future return means
         self.multi_timestep_returns = np.zeros((self.T+1,) + self.returnsdata.shape)
@@ -90,6 +97,12 @@ class pprdyn1:
         self.w_states = self.A_states
         self.n_w_states = self.w_states.shape[0]
 
+        # state, obs, and action space dimensions
+        self.obsspace_dim = self.n_region + self.n_scenario + 1 # A, b, and t are observed, but not s
+        self.statespace_dim = self.n_region + self.n_scenario + 1 + 1 # A, b, s, and t are all part of the state
+        self.actionspace_dim = self.n_w_states
+
+
         # Precompute best portfolio choice for each (belief state, timestep).
         ## define quadrature approximation points and weights for the lognormal distribution of returns
         self.N_QUAD_1D = 20
@@ -99,7 +112,7 @@ class pprdyn1:
         self.scaled_wi = self.WI_3D / np.sqrt(np.pi)**3  # scale weights for 3D quadrature
 
         self.best_weight_idx_matrix = self.build_best_weight_matrices()
-
+        
         # initialize
         self.obs, self.state = self.reset()
         
@@ -156,14 +169,25 @@ class pprdyn1:
         b_next = self.b_states[bidx_next]
 
         # define reward and done
-        totreturns = (t+1) * np.dot(A_next, returns) if self.bnorm == 0 else np.dot(A_next, returns) # optionally normalize by budget to make rewards more comparable across settings with different budgets
 
-        if self.gamma == 1:
-            reward = np.log(totreturns)
-        elif self.gamma < 1:
-            reward =  (totreturns**(1 - self.gamma))/(1 - self.gamma) # use crra utliity function
-        else: # gamma > 1, use log utility without the constant term.
-            reward = (1-self.gamma) * np.log(totreturns) - np.log(self.gamma - 1)
+        if self.for_RL == 0:
+            totreturns = (t+1) * np.dot(A_next, returns) if self.bnorm == 0 else np.dot(A_next, returns) # optionally normalize by budget to make rewards more comparable across settings with different budgets
+            if self.gamma == 1:
+                reward = np.log(totreturns)
+            elif self.gamma < 1:
+                reward =  (totreturns**(1 - self.gamma))/(1 - self.gamma) # use crra utliity function
+            else: # gamma > 1, use log utility without the constant term.
+                reward = (1-self.gamma) * np.log(totreturns) - np.log(self.gamma - 1)
+        else: # for RL training, use the actual crra utility as the reward
+            unscaled_totreturns = np.dot(A_next, returns)
+            totreturns = (t+1)*unscaled_totreturns if self.bnorm == 0 else unscaled_totreturns 
+            if self.gamma == 1:
+                reward = np.log(totreturns)
+            else:
+                reward =  (totreturns**(1 - self.gamma))/(1 - self.gamma) # use crra utliity function
+            reward = np.clip(reward, -self.R_clip, self.R_clip)
+            reward = reward / self.absref_U
+        info['portfolioreturn'] = totreturns
         
         done = t_next >= self.T
         # update state and observation

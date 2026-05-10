@@ -18,3 +18,9 @@
 16,0.999,0.5,10,0.2,1.2,0,gamma=0.5
 17,0.999,0,10,0.2,1.2,0,gamma=0
 18,0.999,20,10,0.2,1.2,1,gamma 20 budget normalization
+19,0.999,10,10,0.2,1.2,1,gamma 20 budget normalization
+20,0.999,5,10,0.2,1.2,1,gamma 20 budget normalization
+21,0.999,3,10,0.2,1.2,1,gamma 20 budget normalization
+22,0.999,1,10,0.2,1.2,1,gamma 20 budget normalization
+23,0.999,0.5,10,0.2,1.2,1,gamma 20 budget normalization
+24,0.999,0,10,0.2,1.2,1,gamma 20 budget normalization
