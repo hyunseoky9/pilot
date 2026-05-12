@@ -1,5 +1,6 @@
 # write a performance evaluation function to track cumulative reward over episodes
 from scipy.special import logsumexp
+import torch
 from pprdyn1 import *
 import os
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
@@ -32,6 +33,15 @@ def avgperformance(env, config, policy_printout=False,printout = False,collect_d
         with open(f'./VI_fixedbelief_policy_setting{env.settingID}.pkl', 'rb') as f:
             ctrl = pickle.load(f)
         Policy = ctrl['policy']
+    elif policytype == 6: # PPO
+        print( 'policy type: PPO')
+        filename = f'./PPO_results/seed{config["RLseed"]}_paramid{config["RLparamid"]}/bestPolicyNetwork_pprdyn1_par0_set{env.settingID}_PPO.pt'
+        Policy = torch.load(filename, weights_only=False)
+        rmsfilename = f'./PPO_results/seed{config["RLseed"]}_paramid{config["RLparamid"]}/bestPolicyrms_pprdyn1_par0_set{env.settingID}_PPO.pkl'
+        with open(rmsfilename, 'rb') as f:
+            rms = pickle.load(f)
+
+        
 
     if policytype in [1,2,3,4]:
         best_wmat = env.build_best_weight_matrices() # best allocation matrices for each belief state and timestep
@@ -55,6 +65,8 @@ def avgperformance(env, config, policy_printout=False,printout = False,collect_d
         done = False
         ep_reward = []
         tt=0
+        if policytype == 1:
+            input = rms.normalize(input)
         while not done:
             if policytype == 0:
                 actionidx = Policy[int(env.state[env.sidx['t']]), env.Aidx, env.bidx]
@@ -68,6 +80,16 @@ def avgperformance(env, config, policy_printout=False,printout = False,collect_d
                 actionidx = best_wmat[env.b_states.shape[0]-1, int(env.state[env.sidx['t']])+1]
             elif policytype == 5:
                 actionidx = Policy[int(env.state[env.sidx['t']]), env.Aidx]
+            elif policytype == 6:
+                # convert input to tensor and pass through policy network
+                input_tensor = torch.tensor(input, dtype=torch.float32).unsqueeze(0)  # Add batch dimension
+                with torch.no_grad():
+                    tensorinput = torch.tensor(input, dtype=torch.float32).unsqueeze(0)  # Add batch dimension
+                    actionidx = Policy.getaction(tensorinput, get_action_only=True)
+                    actionidx = torch.squeeze(actionidx).cpu().detach().numpy()
+
+
+
             if printout:
                 print(f't: {env.state[env.sidx["t"]]}, allocation: {env.w_states[actionidx]}')
             tt += 1
@@ -79,6 +101,8 @@ def avgperformance(env, config, policy_printout=False,printout = False,collect_d
             if collect_data:
                 portfolioreturn[i,int(env.state[env.sidx['t']])-1] = info['portfolioreturn']
             input = env.obs.copy()
+            if policytype == 6:
+                input = rms.normalize(input)
             ep_reward.append(reward)
         ep_reward = np.array(ep_reward)
         if env.gamma <= 1:

@@ -14,7 +14,7 @@ class pprdyn1:
         self.envID = 'pprdyn1'
         envsetting = settings['settingID']
         self.settingID = envsetting
-
+        self.paramsetID = 0
         # parameters
         # import csv of parameters
         filename = 'envsetting.csv'
@@ -39,8 +39,11 @@ class pprdyn1:
         # reward version (0=for general evaluation, 1=for training RL with actual crra utility)
         self.for_RL = settings.get('for_RL', 0)
         if self.for_RL == 1:
-            self.absref_U = np.abs((settings['ref_R']**(1 - self.gamma))/(1 - self.gamma)) # reference return to divide reward with to keep the numerical scale of rewards more manageable for RL training
-            self.R_clip = np.min(self.returnsdata) * np.exp(-0.5*self.sig**2 - 5.4*self.sig) # 5.4 = amount of sd considered in the quadrature approximation. 0.4 lowest mean return 
+            if self.gamma != 1:
+                self.absref_U = np.abs((settings['ref_R']**(1 - self.gamma))/(1 - self.gamma)) # reference return to divide reward with to keep the numerical scale of rewards more manageable for RL training
+            else: 
+                self.absref_U = np.abs(np.log(settings['ref_R']))
+            self.R_floor = 0.5
 
         # get linearly interpolated future return means
         self.multi_timestep_returns = np.zeros((self.T+1,) + self.returnsdata.shape)
@@ -181,11 +184,11 @@ class pprdyn1:
         else: # for RL training, use the actual crra utility as the reward
             unscaled_totreturns = np.dot(A_next, returns)
             totreturns = (t+1)*unscaled_totreturns if self.bnorm == 0 else unscaled_totreturns 
+            totreturns = max(totreturns, self.R_floor)   # <-- floor here
             if self.gamma == 1:
                 reward = np.log(totreturns)
             else:
                 reward =  (totreturns**(1 - self.gamma))/(1 - self.gamma) # use crra utliity function
-            reward = np.clip(reward, -self.R_clip, self.R_clip)
             reward = reward / self.absref_U
         info['portfolioreturn'] = totreturns
         

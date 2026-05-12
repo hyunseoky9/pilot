@@ -22,6 +22,7 @@ class Critic(nn.Module):
         
         # Creating the Sequential module
         self.critic = nn.Sequential(*layers)
+        self._init_weights()
         # set up optimizer and device
         self.optimizer = optim.Adam(self.parameters(), lr=lr, eps=1e-8)
         self.device = T.device(device)
@@ -32,6 +33,15 @@ class Critic(nn.Module):
         elif lrdecaytype == 'multistep':
             self.scheduler = MultiStepLR(self.optimizer, milestones=scheduler_info['lr_drop_ep'],
                                           gamma=scheduler_info['lr_drop_gamma'])
+
+    def _init_weights(self):
+        linears = [m for m in self.critic if isinstance(m, nn.Linear)]
+        for m in linears[:-1]:
+            nn.init.orthogonal_(m.weight, gain=np.sqrt(2))
+            nn.init.zeros_(m.bias)
+        # Policy head: small gain so initial logits are near-uniform
+        nn.init.orthogonal_(linears[-1].weight, gain=1.0)
+        nn.init.zeros_(linears[-1].bias)
 
     def forward(self, state):
         value = self.critic(state)

@@ -6,8 +6,8 @@ import shutil
 import torch
 import os
 import numpy as np
-from calc_performance3 import calc_performance
-from calc_performance3_parallel import calc_performance_parallel
+from calc_performance_pprdyn1 import calc_performance
+from calc_performance_parallel_pprdyn1 import calc_performance_parallel
 from ppo_actor import Actor_pprdyn1
 from ppo_critic import Critic
 import random
@@ -181,7 +181,7 @@ class PPO():
                                         self.actor_hidden_size, self.actor_hidden_num,
                                         self.actor_lrdecayrate, self.actor_lr,
                                         self.actor_min_lr, self.actor_lrdecaytype, 
-                                        self.scheduler_info, self.device, self.entropy_loss_included)
+                                        self.scheduler_info, self.device, self.entropy_loss_included,None)
 
             critic = Critic(self.state_size, 
                             self.critic_hidden_size, self.critic_hidden_num,
@@ -289,6 +289,10 @@ class PPO():
         bestfilename = f"{self.testwd}/PolicyNetwork_{self.env.envID}_par{self.env.paramsetID}_set{self.env.settingID}_{self.algorithmID}_episode{(bestidx+1)*self.evaluation_interval}.pt"
         print(f'best Policy network found at episode {(bestidx+1)*self.evaluation_interval}')
         shutil.copy(bestfilename, f"{self.testwd}/bestPolicyNetwork_{self.env.envID}_par{self.env.paramsetID}_set{self.env.settingID}_{self.algorithmID}.pt")
+        ## save rms for best model
+        if self.standardize:
+            best_rms_filename = f"{self.testwd}/rms_{self.env.envID}_par{self.env.paramsetID}_set{self.env.settingID}_{self.algorithmID}_episode{(bestidx+1)*self.evaluation_interval}.pkl"
+            shutil.copy(best_rms_filename, f"{self.testwd}/bestRMS_{self.env.envID}_par{self.env.paramsetID}_set{self.env.settingID}_{self.algorithmID}.pkl")
 
         ## save performance
         np.save(f"{self.testwd}/rewards_{self.env.envID}_par{self.env.paramsetID}_set{self.env.settingID}_{self.algorithmID}.npy", inttestscores)

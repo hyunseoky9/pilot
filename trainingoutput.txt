@@ -1,0 +1,2721 @@
+-------------------------------------------------------
+--------------------------------------------------------
+Using cpu device
+paramID: 4, iteration: 0, seed: 518785
+env: pprdyn1
+device: cpu
+state size: 8, action size: 231
+actor: hidden num: 3, hidden size: [32, 64, 32]
+critic: hidden num: 2, hidden size: [256, 256]
+actor lr: 0.0005, actor lr decay rate: 1.0, actor min lr: -inf
+critic lr: 0.0003, critic lr decay rate: 1.0, critic min lr: -inf
+standardize: True
+gamma: 0.999, gae_lambda: 0.95
+advantage normalization: True
+KL stopping: True, target KL: 0.02
+c1: 0.5, c2: 0.001, entropy_loss_included: True, policy_clip: 0.2
+rollout length: 512, minibatch size: 64, n_epochs: 12
+evaluation interval: 500, performance sampleN: 1000, parallel testing: False, deterministic eval: False
+max steps: 10, episodenum: 30000
+Episode 500
+serial calc_performance called
+Episode 500, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.70
+-----------------------------------
+Episode 1000
+serial calc_performance called
+Episode 1000, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.70
+-----------------------------------
+Episode 1500
+serial calc_performance called
+Episode 1500, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.74
+-----------------------------------
+Episode 2000
+serial calc_performance called
+Episode 2000, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.74
+-----------------------------------
+Episode 2500
+serial calc_performance called
+Episode 2500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.76
+-----------------------------------
+Episode 3000
+serial calc_performance called
+Episode 3000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.79
+-----------------------------------
+Episode 3500
+serial calc_performance called
+Episode 3500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.80
+-----------------------------------
+Episode 4000
+serial calc_performance called
+Episode 4000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.81
+-----------------------------------
+Episode 4500
+serial calc_performance called
+Episode 4500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.81
+-----------------------------------
+Episode 5000
+serial calc_performance called
+Episode 5000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 5500
+serial calc_performance called
+Episode 5500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 6000
+serial calc_performance called
+Episode 6000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 6500
+serial calc_performance called
+Episode 6500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 7000
+serial calc_performance called
+Episode 7000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 7500
+serial calc_performance called
+Episode 7500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 8000
+serial calc_performance called
+Episode 8000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 8500
+serial calc_performance called
+Episode 8500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 9000
+serial calc_performance called
+Episode 9000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 9500
+serial calc_performance called
+Episode 9500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 10000
+serial calc_performance called
+Episode 10000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 10500
+serial calc_performance called
+Episode 10500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 11000
+serial calc_performance called
+Episode 11000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 11500
+serial calc_performance called
+Episode 11500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 12000
+serial calc_performance called
+Episode 12000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 12500
+serial calc_performance called
+Episode 12500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 13000
+serial calc_performance called
+Episode 13000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 13500
+serial calc_performance called
+Episode 13500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 14000
+serial calc_performance called
+Episode 14000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 14500
+serial calc_performance called
+Episode 14500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 15000
+serial calc_performance called
+Episode 15000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 15500
+serial calc_performance called
+Episode 15500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 16000
+serial calc_performance called
+Episode 16000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 16500
+serial calc_performance called
+Episode 16500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 17000
+serial calc_performance called
+Episode 17000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 17500
+serial calc_performance called
+Episode 17500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 18000
+serial calc_performance called
+Episode 18000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 18500
+serial calc_performance called
+Episode 18500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 19000
+serial calc_performance called
+Episode 19000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 19500
+serial calc_performance called
+Episode 19500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 20000
+serial calc_performance called
+Episode 20000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 20500
+serial calc_performance called
+Episode 20500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 21000
+serial calc_performance called
+Episode 21000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 21500
+serial calc_performance called
+Episode 21500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 22000
+serial calc_performance called
+Episode 22000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 22500
+serial calc_performance called
+Episode 22500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 23000
+serial calc_performance called
+Episode 23000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.92
+-----------------------------------
+Episode 23500
+serial calc_performance called
+Episode 23500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.93
+-----------------------------------
+Episode 24000
+serial calc_performance called
+Episode 24000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 24500
+serial calc_performance called
+Episode 24500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.93
+-----------------------------------
+Episode 25000
+serial calc_performance called
+Episode 25000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.93
+-----------------------------------
+Episode 25500
+serial calc_performance called
+Episode 25500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.93
+-----------------------------------
+Episode 26000
+serial calc_performance called
+Episode 26000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.94
+-----------------------------------
+Episode 26500
+serial calc_performance called
+Episode 26500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.93
+-----------------------------------
+Episode 27000
+serial calc_performance called
+Episode 27000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.93
+-----------------------------------
+Episode 27500
+serial calc_performance called
+Episode 27500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.94
+-----------------------------------
+Episode 28000
+serial calc_performance called
+Episode 28000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.95
+-----------------------------------
+Episode 28500
+serial calc_performance called
+Episode 28500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.94
+-----------------------------------
+Episode 29000
+serial calc_performance called
+Episode 29000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.93
+-----------------------------------
+Episode 29500
+serial calc_performance called
+Episode 29500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.94
+-----------------------------------
+Episode 30000
+serial calc_performance called
+Episode 30000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.94
+-----------------------------------
+best Policy network found at episode 28000
+Training completed.
+Tuneset 1, Iteration 0: [1.95206174 1.94480081 1.94165363 1.93747009 1.93639656 1.93503513
+ 1.9319128  1.93107352 1.92954269 1.92918182 1.92816741 1.92707332
+ 1.92526545 1.91859736 1.91335537 1.90813989 1.90747899 1.90685487
+ 1.90630078 1.90597254 1.90084582 1.89892533 1.89656179 1.89643149
+ 1.89508549 1.89399224 1.88921333 1.88665392 1.88360223 1.88165002
+ 1.87960713 1.87901436 1.87386404 1.87171637 1.87150201 1.86986014
+ 1.86931553 1.86466943 1.86242544 1.86184196 1.86151083 1.86130884
+ 1.85904838 1.85661955 1.84750993 1.84623749 1.84603717 1.84500191
+ 1.83700703 1.82681449 1.82612572 1.80918748 1.8083904  1.79767178
+ 1.78600017 1.76253621 1.73657093 1.73622884 1.70114132 1.70058696]
+-------------------------------------------------------
+--------------------------------------------------------
+Using cpu device
+paramID: 4, iteration: 1, seed: 508759
+env: pprdyn1
+device: cpu
+state size: 8, action size: 231
+actor: hidden num: 3, hidden size: [32, 64, 32]
+critic: hidden num: 2, hidden size: [256, 256]
+actor lr: 0.0005, actor lr decay rate: 1.0, actor min lr: -inf
+critic lr: 0.0003, critic lr decay rate: 1.0, critic min lr: -inf
+standardize: True
+gamma: 0.999, gae_lambda: 0.95
+advantage normalization: True
+KL stopping: True, target KL: 0.02
+c1: 0.5, c2: 0.001, entropy_loss_included: True, policy_clip: 0.2
+rollout length: 512, minibatch size: 64, n_epochs: 12
+evaluation interval: 500, performance sampleN: 1000, parallel testing: False, deterministic eval: False
+max steps: 10, episodenum: 30000
+Episode 500
+serial calc_performance called
+Episode 500, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.69
+-----------------------------------
+Episode 1000
+serial calc_performance called
+Episode 1000, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.72
+-----------------------------------
+Episode 1500
+serial calc_performance called
+Episode 1500, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.72
+-----------------------------------
+Episode 2000
+serial calc_performance called
+Episode 2000, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.75
+-----------------------------------
+Episode 2500
+serial calc_performance called
+Episode 2500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.76
+-----------------------------------
+Episode 3000
+serial calc_performance called
+Episode 3000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.80
+-----------------------------------
+Episode 3500
+serial calc_performance called
+Episode 3500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.78
+-----------------------------------
+Episode 4000
+serial calc_performance called
+Episode 4000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.79
+-----------------------------------
+Episode 4500
+serial calc_performance called
+Episode 4500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 5000
+serial calc_performance called
+Episode 5000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 5500
+serial calc_performance called
+Episode 5500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 6000
+serial calc_performance called
+Episode 6000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 6500
+serial calc_performance called
+Episode 6500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.81
+-----------------------------------
+Episode 7000
+serial calc_performance called
+Episode 7000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 7500
+serial calc_performance called
+Episode 7500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.81
+-----------------------------------
+Episode 8000
+serial calc_performance called
+Episode 8000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.81
+-----------------------------------
+Episode 8500
+serial calc_performance called
+Episode 8500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.81
+-----------------------------------
+Episode 9000
+serial calc_performance called
+Episode 9000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.81
+-----------------------------------
+Episode 9500
+serial calc_performance called
+Episode 9500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.81
+-----------------------------------
+Episode 10000
+serial calc_performance called
+Episode 10000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 10500
+serial calc_performance called
+Episode 10500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 11000
+serial calc_performance called
+Episode 11000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 11500
+serial calc_performance called
+Episode 11500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 12000
+serial calc_performance called
+Episode 12000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 12500
+serial calc_performance called
+Episode 12500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 13000
+serial calc_performance called
+Episode 13000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 13500
+serial calc_performance called
+Episode 13500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 14000
+serial calc_performance called
+Episode 14000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 14500
+serial calc_performance called
+Episode 14500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 15000
+serial calc_performance called
+Episode 15000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 15500
+serial calc_performance called
+Episode 15500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 16000
+serial calc_performance called
+Episode 16000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 16500
+serial calc_performance called
+Episode 16500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 17000
+serial calc_performance called
+Episode 17000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 17500
+serial calc_performance called
+Episode 17500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 18000
+serial calc_performance called
+Episode 18000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 18500
+serial calc_performance called
+Episode 18500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 19000
+serial calc_performance called
+Episode 19000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 19500
+serial calc_performance called
+Episode 19500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 20000
+serial calc_performance called
+Episode 20000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 20500
+serial calc_performance called
+Episode 20500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 21000
+serial calc_performance called
+Episode 21000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 21500
+serial calc_performance called
+Episode 21500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 22000
+serial calc_performance called
+Episode 22000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 22500
+serial calc_performance called
+Episode 22500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 23000
+serial calc_performance called
+Episode 23000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 23500
+serial calc_performance called
+Episode 23500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.92
+-----------------------------------
+Episode 24000
+serial calc_performance called
+Episode 24000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 24500
+serial calc_performance called
+Episode 24500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 25000
+serial calc_performance called
+Episode 25000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.93
+-----------------------------------
+Episode 25500
+serial calc_performance called
+Episode 25500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 26000
+serial calc_performance called
+Episode 26000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 26500
+serial calc_performance called
+Episode 26500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 27000
+serial calc_performance called
+Episode 27000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 27500
+serial calc_performance called
+Episode 27500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 28000
+serial calc_performance called
+Episode 28000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 28500
+serial calc_performance called
+Episode 28500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 29000
+serial calc_performance called
+Episode 29000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 29500
+serial calc_performance called
+Episode 29500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 30000
+serial calc_performance called
+Episode 30000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+best Policy network found at episode 25000
+Training completed.
+Tuneset 1, Iteration 1: [1.93138925 1.92358385 1.90755847 1.90728994 1.90640171 1.90121117
+ 1.90110261 1.90079398 1.89994172 1.89759871 1.89751593 1.89705074
+ 1.89647271 1.89602728 1.89600551 1.89309555 1.8831256  1.87933199
+ 1.87761945 1.87622946 1.87494604 1.8731392  1.87086677 1.8665672
+ 1.8647156  1.86197069 1.85637769 1.85299922 1.84953547 1.84921439
+ 1.8482105  1.84600286 1.84440405 1.8418327  1.83893919 1.83686351
+ 1.83591662 1.83334367 1.8327238  1.83133304 1.83078109 1.83065291
+ 1.82844211 1.82306642 1.82093908 1.82076737 1.81294692 1.81293693
+ 1.81224691 1.8109729  1.80682866 1.80525851 1.79949296 1.78634152
+ 1.77945261 1.75920568 1.75377503 1.71752983 1.71503569 1.69354274]
+-------------------------------------------------------
+--------------------------------------------------------
+Using cpu device
+paramID: 4, iteration: 2, seed: 827120
+env: pprdyn1
+device: cpu
+state size: 8, action size: 231
+actor: hidden num: 3, hidden size: [32, 64, 32]
+critic: hidden num: 2, hidden size: [256, 256]
+actor lr: 0.0005, actor lr decay rate: 1.0, actor min lr: -inf
+critic lr: 0.0003, critic lr decay rate: 1.0, critic min lr: -inf
+standardize: True
+gamma: 0.999, gae_lambda: 0.95
+advantage normalization: True
+KL stopping: True, target KL: 0.02
+c1: 0.5, c2: 0.001, entropy_loss_included: True, policy_clip: 0.2
+rollout length: 512, minibatch size: 64, n_epochs: 12
+evaluation interval: 500, performance sampleN: 1000, parallel testing: False, deterministic eval: False
+max steps: 10, episodenum: 30000
+Episode 500
+serial calc_performance called
+Episode 500, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.70
+-----------------------------------
+Episode 1000
+serial calc_performance called
+Episode 1000, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.71
+-----------------------------------
+Episode 1500
+serial calc_performance called
+Episode 1500, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.73
+-----------------------------------
+Episode 2000
+serial calc_performance called
+Episode 2000, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.74
+-----------------------------------
+Episode 2500
+serial calc_performance called
+Episode 2500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.77
+-----------------------------------
+Episode 3000
+serial calc_performance called
+Episode 3000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.78
+-----------------------------------
+Episode 3500
+serial calc_performance called
+Episode 3500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.80
+-----------------------------------
+Episode 4000
+serial calc_performance called
+Episode 4000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 4500
+serial calc_performance called
+Episode 4500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.81
+-----------------------------------
+Episode 5000
+serial calc_performance called
+Episode 5000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.80
+-----------------------------------
+Episode 5500
+serial calc_performance called
+Episode 5500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.79
+-----------------------------------
+Episode 6000
+serial calc_performance called
+Episode 6000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.81
+-----------------------------------
+Episode 6500
+serial calc_performance called
+Episode 6500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.81
+-----------------------------------
+Episode 7000
+serial calc_performance called
+Episode 7000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 7500
+serial calc_performance called
+Episode 7500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 8000
+serial calc_performance called
+Episode 8000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 8500
+serial calc_performance called
+Episode 8500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 9000
+serial calc_performance called
+Episode 9000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 9500
+serial calc_performance called
+Episode 9500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 10000
+serial calc_performance called
+Episode 10000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 10500
+serial calc_performance called
+Episode 10500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 11000
+serial calc_performance called
+Episode 11000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 11500
+serial calc_performance called
+Episode 11500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 12000
+serial calc_performance called
+Episode 12000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 12500
+serial calc_performance called
+Episode 12500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 13000
+serial calc_performance called
+Episode 13000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 13500
+serial calc_performance called
+Episode 13500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 14000
+serial calc_performance called
+Episode 14000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 14500
+serial calc_performance called
+Episode 14500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 15000
+serial calc_performance called
+Episode 15000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 15500
+serial calc_performance called
+Episode 15500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 16000
+serial calc_performance called
+Episode 16000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 16500
+serial calc_performance called
+Episode 16500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 17000
+serial calc_performance called
+Episode 17000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 17500
+serial calc_performance called
+Episode 17500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 18000
+serial calc_performance called
+Episode 18000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 18500
+serial calc_performance called
+Episode 18500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 19000
+serial calc_performance called
+Episode 19000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 19500
+serial calc_performance called
+Episode 19500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 20000
+serial calc_performance called
+Episode 20000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 20500
+serial calc_performance called
+Episode 20500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 21000
+serial calc_performance called
+Episode 21000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 21500
+serial calc_performance called
+Episode 21500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 22000
+serial calc_performance called
+Episode 22000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 22500
+serial calc_performance called
+Episode 22500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 23000
+serial calc_performance called
+Episode 23000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 23500
+serial calc_performance called
+Episode 23500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 24000
+serial calc_performance called
+Episode 24000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 24500
+serial calc_performance called
+Episode 24500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 25000
+serial calc_performance called
+Episode 25000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 25500
+serial calc_performance called
+Episode 25500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 26000
+serial calc_performance called
+Episode 26000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 26500
+serial calc_performance called
+Episode 26500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 27000
+serial calc_performance called
+Episode 27000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 27500
+serial calc_performance called
+Episode 27500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 28000
+serial calc_performance called
+Episode 28000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 28500
+serial calc_performance called
+Episode 28500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 29000
+serial calc_performance called
+Episode 29000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 29500
+serial calc_performance called
+Episode 29500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 30000
+serial calc_performance called
+Episode 30000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+best Policy network found at episode 29500
+Training completed.
+Tuneset 1, Iteration 2: [1.90767742 1.9015786  1.90091747 1.89792582 1.89547485 1.8922325
+ 1.89216219 1.88916705 1.8888009  1.885499   1.88481647 1.8835242
+ 1.88033339 1.87949651 1.8793923  1.87885286 1.87866843 1.87808389
+ 1.8776866  1.87351628 1.87280585 1.87227528 1.87144757 1.87080263
+ 1.86995104 1.86513181 1.86475248 1.86432347 1.86261005 1.86245388
+ 1.86161645 1.86160674 1.85691852 1.85438117 1.85101441 1.84947012
+ 1.84846871 1.84575344 1.84535905 1.8445375  1.83768566 1.83705093
+ 1.83545251 1.82529391 1.82472022 1.82328699 1.81759431 1.8175078
+ 1.81295765 1.80819777 1.8074535  1.80485938 1.80130298 1.7865732
+ 1.77805311 1.76539423 1.73828178 1.73051597 1.7098023  1.69561451]
+-------------------------------------------------------
+--------------------------------------------------------
+Using cpu device
+paramID: 4, iteration: 3, seed: 857338
+env: pprdyn1
+device: cpu
+state size: 8, action size: 231
+actor: hidden num: 3, hidden size: [32, 64, 32]
+critic: hidden num: 2, hidden size: [256, 256]
+actor lr: 0.0005, actor lr decay rate: 1.0, actor min lr: -inf
+critic lr: 0.0003, critic lr decay rate: 1.0, critic min lr: -inf
+standardize: True
+gamma: 0.999, gae_lambda: 0.95
+advantage normalization: True
+KL stopping: True, target KL: 0.02
+c1: 0.5, c2: 0.001, entropy_loss_included: True, policy_clip: 0.2
+rollout length: 512, minibatch size: 64, n_epochs: 12
+evaluation interval: 500, performance sampleN: 1000, parallel testing: False, deterministic eval: False
+max steps: 10, episodenum: 30000
+Episode 500
+serial calc_performance called
+Episode 500, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.70
+-----------------------------------
+Episode 1000
+serial calc_performance called
+Episode 1000, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.72
+-----------------------------------
+Episode 1500
+serial calc_performance called
+Episode 1500, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.74
+-----------------------------------
+Episode 2000
+serial calc_performance called
+Episode 2000, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.84
+-----------------------------------
+Episode 2500
+serial calc_performance called
+Episode 2500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 3000
+serial calc_performance called
+Episode 3000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 3500
+serial calc_performance called
+Episode 3500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 4000
+serial calc_performance called
+Episode 4000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 4500
+serial calc_performance called
+Episode 4500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 5000
+serial calc_performance called
+Episode 5000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 5500
+serial calc_performance called
+Episode 5500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 6000
+serial calc_performance called
+Episode 6000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 6500
+serial calc_performance called
+Episode 6500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 7000
+serial calc_performance called
+Episode 7000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 7500
+serial calc_performance called
+Episode 7500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 8000
+serial calc_performance called
+Episode 8000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 8500
+serial calc_performance called
+Episode 8500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 9000
+serial calc_performance called
+Episode 9000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 9500
+serial calc_performance called
+Episode 9500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 10000
+serial calc_performance called
+Episode 10000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 10500
+serial calc_performance called
+Episode 10500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.92
+-----------------------------------
+Episode 11000
+serial calc_performance called
+Episode 11000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 11500
+serial calc_performance called
+Episode 11500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 12000
+serial calc_performance called
+Episode 12000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 12500
+serial calc_performance called
+Episode 12500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 13000
+serial calc_performance called
+Episode 13000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 13500
+serial calc_performance called
+Episode 13500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.93
+-----------------------------------
+Episode 14000
+serial calc_performance called
+Episode 14000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.93
+-----------------------------------
+Episode 14500
+serial calc_performance called
+Episode 14500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 15000
+serial calc_performance called
+Episode 15000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.93
+-----------------------------------
+Episode 15500
+serial calc_performance called
+Episode 15500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.93
+-----------------------------------
+Episode 16000
+serial calc_performance called
+Episode 16000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.96
+-----------------------------------
+Episode 16500
+serial calc_performance called
+Episode 16500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.94
+-----------------------------------
+Episode 17000
+serial calc_performance called
+Episode 17000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.94
+-----------------------------------
+Episode 17500
+serial calc_performance called
+Episode 17500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.94
+-----------------------------------
+Episode 18000
+serial calc_performance called
+Episode 18000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.95
+-----------------------------------
+Episode 18500
+serial calc_performance called
+Episode 18500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.94
+-----------------------------------
+Episode 19000
+serial calc_performance called
+Episode 19000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.95
+-----------------------------------
+Episode 19500
+serial calc_performance called
+Episode 19500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.93
+-----------------------------------
+Episode 20000
+serial calc_performance called
+Episode 20000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.96
+-----------------------------------
+Episode 20500
+serial calc_performance called
+Episode 20500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.94
+-----------------------------------
+Episode 21000
+serial calc_performance called
+Episode 21000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.96
+-----------------------------------
+Episode 21500
+serial calc_performance called
+Episode 21500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.94
+-----------------------------------
+Episode 22000
+serial calc_performance called
+Episode 22000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.96
+-----------------------------------
+Episode 22500
+serial calc_performance called
+Episode 22500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.97
+-----------------------------------
+Episode 23000
+serial calc_performance called
+Episode 23000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.94
+-----------------------------------
+Episode 23500
+serial calc_performance called
+Episode 23500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.95
+-----------------------------------
+Episode 24000
+serial calc_performance called
+Episode 24000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.95
+-----------------------------------
+Episode 24500
+serial calc_performance called
+Episode 24500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.95
+-----------------------------------
+Episode 25000
+serial calc_performance called
+Episode 25000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.95
+-----------------------------------
+Episode 25500
+serial calc_performance called
+Episode 25500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.95
+-----------------------------------
+Episode 26000
+serial calc_performance called
+Episode 26000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.95
+-----------------------------------
+Episode 26500
+serial calc_performance called
+Episode 26500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.95
+-----------------------------------
+Episode 27000
+serial calc_performance called
+Episode 27000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.98
+-----------------------------------
+Episode 27500
+serial calc_performance called
+Episode 27500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.96
+-----------------------------------
+Episode 28000
+serial calc_performance called
+Episode 28000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.98
+-----------------------------------
+Episode 28500
+serial calc_performance called
+Episode 28500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.98
+-----------------------------------
+Episode 29000
+serial calc_performance called
+Episode 29000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.95
+-----------------------------------
+Episode 29500
+serial calc_performance called
+Episode 29500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.96
+-----------------------------------
+Episode 30000
+serial calc_performance called
+Episode 30000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.94
+-----------------------------------
+best Policy network found at episode 27000
+Training completed.
+Tuneset 1, Iteration 3: [1.98039878 1.97676481 1.97524571 1.96862286 1.96349641 1.96210842
+ 1.9619963  1.96025154 1.9582588  1.95642937 1.954023   1.95257675
+ 1.95156051 1.95074427 1.95068461 1.95010031 1.94865061 1.94850995
+ 1.94845818 1.94702278 1.9447701  1.94392752 1.94217626 1.94101495
+ 1.93949883 1.9376417  1.9359589  1.93542427 1.93471685 1.93373182
+ 1.93156378 1.93044777 1.92568481 1.91784828 1.9144688  1.91318791
+ 1.91246431 1.90811388 1.90391489 1.90322897 1.90318751 1.90260104
+ 1.90220314 1.89940168 1.89742532 1.88821929 1.88415804 1.88266082
+ 1.88266027 1.88138113 1.8779617  1.86132954 1.85955167 1.85611948
+ 1.84569526 1.83696514 1.83672306 1.74040545 1.71773274 1.69738821]
+-------------------------------------------------------
+--------------------------------------------------------
+Using cpu device
+paramID: 4, iteration: 4, seed: 10673
+env: pprdyn1
+device: cpu
+state size: 8, action size: 231
+actor: hidden num: 3, hidden size: [32, 64, 32]
+critic: hidden num: 2, hidden size: [256, 256]
+actor lr: 0.0005, actor lr decay rate: 1.0, actor min lr: -inf
+critic lr: 0.0003, critic lr decay rate: 1.0, critic min lr: -inf
+standardize: True
+gamma: 0.999, gae_lambda: 0.95
+advantage normalization: True
+KL stopping: True, target KL: 0.02
+c1: 0.5, c2: 0.001, entropy_loss_included: True, policy_clip: 0.2
+rollout length: 512, minibatch size: 64, n_epochs: 12
+evaluation interval: 500, performance sampleN: 1000, parallel testing: False, deterministic eval: False
+max steps: 10, episodenum: 30000
+Episode 500
+serial calc_performance called
+Episode 500, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.69
+-----------------------------------
+Episode 1000
+serial calc_performance called
+Episode 1000, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.70
+-----------------------------------
+Episode 1500
+serial calc_performance called
+Episode 1500, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.73
+-----------------------------------
+Episode 2000
+serial calc_performance called
+Episode 2000, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.76
+-----------------------------------
+Episode 2500
+serial calc_performance called
+Episode 2500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.78
+-----------------------------------
+Episode 3000
+serial calc_performance called
+Episode 3000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.80
+-----------------------------------
+Episode 3500
+serial calc_performance called
+Episode 3500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 4000
+serial calc_performance called
+Episode 4000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 4500
+serial calc_performance called
+Episode 4500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 5000
+serial calc_performance called
+Episode 5000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 5500
+serial calc_performance called
+Episode 5500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 6000
+serial calc_performance called
+Episode 6000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 6500
+serial calc_performance called
+Episode 6500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 7000
+serial calc_performance called
+Episode 7000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 7500
+serial calc_performance called
+Episode 7500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.81
+-----------------------------------
+Episode 8000
+serial calc_performance called
+Episode 8000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 8500
+serial calc_performance called
+Episode 8500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 9000
+serial calc_performance called
+Episode 9000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 9500
+serial calc_performance called
+Episode 9500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 10000
+serial calc_performance called
+Episode 10000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 10500
+serial calc_performance called
+Episode 10500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 11000
+serial calc_performance called
+Episode 11000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 11500
+serial calc_performance called
+Episode 11500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 12000
+serial calc_performance called
+Episode 12000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 12500
+serial calc_performance called
+Episode 12500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 13000
+serial calc_performance called
+Episode 13000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.80
+-----------------------------------
+Episode 13500
+serial calc_performance called
+Episode 13500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 14000
+serial calc_performance called
+Episode 14000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 14500
+serial calc_performance called
+Episode 14500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 15000
+serial calc_performance called
+Episode 15000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 15500
+serial calc_performance called
+Episode 15500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 16000
+serial calc_performance called
+Episode 16000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 16500
+serial calc_performance called
+Episode 16500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 17000
+serial calc_performance called
+Episode 17000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 17500
+serial calc_performance called
+Episode 17500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 18000
+serial calc_performance called
+Episode 18000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 18500
+serial calc_performance called
+Episode 18500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 19000
+serial calc_performance called
+Episode 19000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 19500
+serial calc_performance called
+Episode 19500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 20000
+serial calc_performance called
+Episode 20000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 20500
+serial calc_performance called
+Episode 20500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 21000
+serial calc_performance called
+Episode 21000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 21500
+serial calc_performance called
+Episode 21500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 22000
+serial calc_performance called
+Episode 22000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 22500
+serial calc_performance called
+Episode 22500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 23000
+serial calc_performance called
+Episode 23000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 23500
+serial calc_performance called
+Episode 23500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 24000
+serial calc_performance called
+Episode 24000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 24500
+serial calc_performance called
+Episode 24500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 25000
+serial calc_performance called
+Episode 25000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 25500
+serial calc_performance called
+Episode 25500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 26000
+serial calc_performance called
+Episode 26000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 26500
+serial calc_performance called
+Episode 26500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 27000
+serial calc_performance called
+Episode 27000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 27500
+serial calc_performance called
+Episode 27500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 28000
+serial calc_performance called
+Episode 28000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 28500
+serial calc_performance called
+Episode 28500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 29000
+serial calc_performance called
+Episode 29000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 29500
+serial calc_performance called
+Episode 29500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 30000
+serial calc_performance called
+Episode 30000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+best Policy network found at episode 26500
+Training completed.
+Tuneset 1, Iteration 4: [1.90179798 1.90078624 1.89231987 1.89137978 1.89035272 1.88952389
+ 1.88837133 1.88590179 1.88536794 1.88412216 1.88340887 1.88302463
+ 1.88198218 1.88166975 1.88104302 1.88071666 1.87905107 1.87842491
+ 1.87605492 1.87448044 1.87438752 1.87432313 1.87321616 1.87279959
+ 1.86679565 1.86026122 1.86022563 1.85918189 1.85871217 1.8477217
+ 1.84589635 1.84401224 1.84344093 1.8427937  1.84161552 1.84020211
+ 1.83908434 1.8380971  1.83698878 1.83690388 1.83438565 1.83221667
+ 1.83131867 1.82903728 1.82803955 1.82636153 1.8255229  1.82444806
+ 1.82418679 1.82164444 1.81902686 1.81512376 1.80732632 1.80428817
+ 1.80203618 1.78166579 1.76336954 1.72686091 1.70079684 1.68874028]
+-------------------------------------------------------
+--------------------------------------------------------
+Using cpu device
+paramID: 4, iteration: 5, seed: 702204
+env: pprdyn1
+device: cpu
+state size: 8, action size: 231
+actor: hidden num: 3, hidden size: [32, 64, 32]
+critic: hidden num: 2, hidden size: [256, 256]
+actor lr: 0.0005, actor lr decay rate: 1.0, actor min lr: -inf
+critic lr: 0.0003, critic lr decay rate: 1.0, critic min lr: -inf
+standardize: True
+gamma: 0.999, gae_lambda: 0.95
+advantage normalization: True
+KL stopping: True, target KL: 0.02
+c1: 0.5, c2: 0.001, entropy_loss_included: True, policy_clip: 0.2
+rollout length: 512, minibatch size: 64, n_epochs: 12
+evaluation interval: 500, performance sampleN: 1000, parallel testing: False, deterministic eval: False
+max steps: 10, episodenum: 30000
+Episode 500
+serial calc_performance called
+Episode 500, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.69
+-----------------------------------
+Episode 1000
+serial calc_performance called
+Episode 1000, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.71
+-----------------------------------
+Episode 1500
+serial calc_performance called
+Episode 1500, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.72
+-----------------------------------
+Episode 2000
+serial calc_performance called
+Episode 2000, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.73
+-----------------------------------
+Episode 2500
+serial calc_performance called
+Episode 2500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.76
+-----------------------------------
+Episode 3000
+serial calc_performance called
+Episode 3000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.78
+-----------------------------------
+Episode 3500
+serial calc_performance called
+Episode 3500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.80
+-----------------------------------
+Episode 4000
+serial calc_performance called
+Episode 4000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 4500
+serial calc_performance called
+Episode 4500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 5000
+serial calc_performance called
+Episode 5000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 5500
+serial calc_performance called
+Episode 5500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 6000
+serial calc_performance called
+Episode 6000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 6500
+serial calc_performance called
+Episode 6500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 7000
+serial calc_performance called
+Episode 7000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 7500
+serial calc_performance called
+Episode 7500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 8000
+serial calc_performance called
+Episode 8000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 8500
+serial calc_performance called
+Episode 8500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 9000
+serial calc_performance called
+Episode 9000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 9500
+serial calc_performance called
+Episode 9500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 10000
+serial calc_performance called
+Episode 10000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 10500
+serial calc_performance called
+Episode 10500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 11000
+serial calc_performance called
+Episode 11000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 11500
+serial calc_performance called
+Episode 11500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 12000
+serial calc_performance called
+Episode 12000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 12500
+serial calc_performance called
+Episode 12500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 13000
+serial calc_performance called
+Episode 13000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 13500
+serial calc_performance called
+Episode 13500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 14000
+serial calc_performance called
+Episode 14000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 14500
+serial calc_performance called
+Episode 14500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 15000
+serial calc_performance called
+Episode 15000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 15500
+serial calc_performance called
+Episode 15500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 16000
+serial calc_performance called
+Episode 16000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 16500
+serial calc_performance called
+Episode 16500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 17000
+serial calc_performance called
+Episode 17000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 17500
+serial calc_performance called
+Episode 17500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 18000
+serial calc_performance called
+Episode 18000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 18500
+serial calc_performance called
+Episode 18500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 19000
+serial calc_performance called
+Episode 19000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 19500
+serial calc_performance called
+Episode 19500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 20000
+serial calc_performance called
+Episode 20000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 20500
+serial calc_performance called
+Episode 20500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 21000
+serial calc_performance called
+Episode 21000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 21500
+serial calc_performance called
+Episode 21500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 22000
+serial calc_performance called
+Episode 22000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 22500
+serial calc_performance called
+Episode 22500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 23000
+serial calc_performance called
+Episode 23000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.93
+-----------------------------------
+Episode 23500
+serial calc_performance called
+Episode 23500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 24000
+serial calc_performance called
+Episode 24000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 24500
+serial calc_performance called
+Episode 24500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 25000
+serial calc_performance called
+Episode 25000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.94
+-----------------------------------
+Episode 25500
+serial calc_performance called
+Episode 25500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.92
+-----------------------------------
+Episode 26000
+serial calc_performance called
+Episode 26000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.95
+-----------------------------------
+Episode 26500
+serial calc_performance called
+Episode 26500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.94
+-----------------------------------
+Episode 27000
+serial calc_performance called
+Episode 27000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.95
+-----------------------------------
+Episode 27500
+serial calc_performance called
+Episode 27500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.96
+-----------------------------------
+Episode 28000
+serial calc_performance called
+Episode 28000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.96
+-----------------------------------
+Episode 28500
+serial calc_performance called
+Episode 28500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.93
+-----------------------------------
+Episode 29000
+serial calc_performance called
+Episode 29000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.94
+-----------------------------------
+Episode 29500
+serial calc_performance called
+Episode 29500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.95
+-----------------------------------
+Episode 30000
+serial calc_performance called
+Episode 30000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.96
+-----------------------------------
+best Policy network found at episode 30000
+Training completed.
+Tuneset 1, Iteration 5: [1.95854299 1.95814543 1.95701339 1.95247404 1.94856101 1.9468338
+ 1.94413999 1.94398826 1.94139754 1.93255361 1.92670098 1.92463369
+ 1.91396621 1.9126355  1.91106116 1.90872895 1.90500809 1.89820059
+ 1.89441759 1.89389424 1.8922229  1.88833954 1.8770651  1.87567995
+ 1.87265578 1.87230861 1.87055132 1.8684791  1.86323664 1.85954012
+ 1.85950489 1.85947118 1.85769793 1.85730448 1.8572664  1.85599639
+ 1.85475656 1.85458007 1.85399713 1.85262904 1.85194731 1.84923007
+ 1.84815747 1.84670235 1.84623644 1.84508432 1.84251124 1.84175173
+ 1.84116129 1.83191822 1.83015119 1.8194793  1.81788312 1.80420037
+ 1.78075941 1.75914228 1.7347033  1.71886188 1.70817802 1.69104063]
+-------------------------------------------------------
+--------------------------------------------------------
+Using cpu device
+paramID: 4, iteration: 6, seed: 357404
+env: pprdyn1
+device: cpu
+state size: 8, action size: 231
+actor: hidden num: 3, hidden size: [32, 64, 32]
+critic: hidden num: 2, hidden size: [256, 256]
+actor lr: 0.0005, actor lr decay rate: 1.0, actor min lr: -inf
+critic lr: 0.0003, critic lr decay rate: 1.0, critic min lr: -inf
+standardize: True
+gamma: 0.999, gae_lambda: 0.95
+advantage normalization: True
+KL stopping: True, target KL: 0.02
+c1: 0.5, c2: 0.001, entropy_loss_included: True, policy_clip: 0.2
+rollout length: 512, minibatch size: 64, n_epochs: 12
+evaluation interval: 500, performance sampleN: 1000, parallel testing: False, deterministic eval: False
+max steps: 10, episodenum: 30000
+Episode 500
+serial calc_performance called
+Episode 500, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.70
+-----------------------------------
+Episode 1000
+serial calc_performance called
+Episode 1000, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.70
+-----------------------------------
+Episode 1500
+serial calc_performance called
+Episode 1500, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.75
+-----------------------------------
+Episode 2000
+serial calc_performance called
+Episode 2000, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.78
+-----------------------------------
+Episode 2500
+serial calc_performance called
+Episode 2500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.78
+-----------------------------------
+Episode 3000
+serial calc_performance called
+Episode 3000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 3500
+serial calc_performance called
+Episode 3500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 4000
+serial calc_performance called
+Episode 4000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 4500
+serial calc_performance called
+Episode 4500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 5000
+serial calc_performance called
+Episode 5000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 5500
+serial calc_performance called
+Episode 5500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 6000
+serial calc_performance called
+Episode 6000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 6500
+serial calc_performance called
+Episode 6500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 7000
+serial calc_performance called
+Episode 7000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 7500
+serial calc_performance called
+Episode 7500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 8000
+serial calc_performance called
+Episode 8000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 8500
+serial calc_performance called
+Episode 8500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 9000
+serial calc_performance called
+Episode 9000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 9500
+serial calc_performance called
+Episode 9500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 10000
+serial calc_performance called
+Episode 10000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 10500
+serial calc_performance called
+Episode 10500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 11000
+serial calc_performance called
+Episode 11000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 11500
+serial calc_performance called
+Episode 11500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 12000
+serial calc_performance called
+Episode 12000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 12500
+serial calc_performance called
+Episode 12500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 13000
+serial calc_performance called
+Episode 13000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 13500
+serial calc_performance called
+Episode 13500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 14000
+serial calc_performance called
+Episode 14000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 14500
+serial calc_performance called
+Episode 14500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 15000
+serial calc_performance called
+Episode 15000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 15500
+serial calc_performance called
+Episode 15500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 16000
+serial calc_performance called
+Episode 16000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 16500
+serial calc_performance called
+Episode 16500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 17000
+serial calc_performance called
+Episode 17000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 17500
+serial calc_performance called
+Episode 17500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 18000
+serial calc_performance called
+Episode 18000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 18500
+serial calc_performance called
+Episode 18500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 19000
+serial calc_performance called
+Episode 19000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 19500
+serial calc_performance called
+Episode 19500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.92
+-----------------------------------
+Episode 20000
+serial calc_performance called
+Episode 20000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 20500
+serial calc_performance called
+Episode 20500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 21000
+serial calc_performance called
+Episode 21000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 21500
+serial calc_performance called
+Episode 21500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 22000
+serial calc_performance called
+Episode 22000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 22500
+serial calc_performance called
+Episode 22500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 23000
+serial calc_performance called
+Episode 23000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.92
+-----------------------------------
+Episode 23500
+serial calc_performance called
+Episode 23500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 24000
+serial calc_performance called
+Episode 24000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 24500
+serial calc_performance called
+Episode 24500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 25000
+serial calc_performance called
+Episode 25000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.92
+-----------------------------------
+Episode 25500
+serial calc_performance called
+Episode 25500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.92
+-----------------------------------
+Episode 26000
+serial calc_performance called
+Episode 26000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.92
+-----------------------------------
+Episode 26500
+serial calc_performance called
+Episode 26500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 27000
+serial calc_performance called
+Episode 27000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.92
+-----------------------------------
+Episode 27500
+serial calc_performance called
+Episode 27500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 28000
+serial calc_performance called
+Episode 28000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.92
+-----------------------------------
+Episode 28500
+serial calc_performance called
+Episode 28500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.94
+-----------------------------------
+Episode 29000
+serial calc_performance called
+Episode 29000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.96
+-----------------------------------
+Episode 29500
+serial calc_performance called
+Episode 29500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.92
+-----------------------------------
+Episode 30000
+serial calc_performance called
+Episode 30000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.94
+-----------------------------------
+best Policy network found at episode 29000
+Training completed.
+Tuneset 1, Iteration 6: [1.95515633 1.9448172  1.9436057  1.92493444 1.92374436 1.92314023
+ 1.92215217 1.92210898 1.91912725 1.91755619 1.9166136  1.91472748
+ 1.91421669 1.90977539 1.90401784 1.90343182 1.9020437  1.90099783
+ 1.90015364 1.89911368 1.89864277 1.89475786 1.88874597 1.88667513
+ 1.8866469  1.88559106 1.88469379 1.88395237 1.88031923 1.87864981
+ 1.8767894  1.87558542 1.87202302 1.87019448 1.86430623 1.86320695
+ 1.86264594 1.8623012  1.85039935 1.85027466 1.8488464  1.84825443
+ 1.84539999 1.84284402 1.84157918 1.84126378 1.84118181 1.8396296
+ 1.83639741 1.83516964 1.83335551 1.83209534 1.83086061 1.82704752
+ 1.81727313 1.78211403 1.77913818 1.74929377 1.70350974 1.69505642]
+-------------------------------------------------------
+--------------------------------------------------------
+Using cpu device
+paramID: 4, iteration: 7, seed: 296238
+env: pprdyn1
+device: cpu
+state size: 8, action size: 231
+actor: hidden num: 3, hidden size: [32, 64, 32]
+critic: hidden num: 2, hidden size: [256, 256]
+actor lr: 0.0005, actor lr decay rate: 1.0, actor min lr: -inf
+critic lr: 0.0003, critic lr decay rate: 1.0, critic min lr: -inf
+standardize: True
+gamma: 0.999, gae_lambda: 0.95
+advantage normalization: True
+KL stopping: True, target KL: 0.02
+c1: 0.5, c2: 0.001, entropy_loss_included: True, policy_clip: 0.2
+rollout length: 512, minibatch size: 64, n_epochs: 12
+evaluation interval: 500, performance sampleN: 1000, parallel testing: False, deterministic eval: False
+max steps: 10, episodenum: 30000
+Episode 500
+serial calc_performance called
+Episode 500, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.69
+-----------------------------------
+Episode 1000
+serial calc_performance called
+Episode 1000, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.71
+-----------------------------------
+Episode 1500
+serial calc_performance called
+Episode 1500, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.74
+-----------------------------------
+Episode 2000
+serial calc_performance called
+Episode 2000, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.79
+-----------------------------------
+Episode 2500
+serial calc_performance called
+Episode 2500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.79
+-----------------------------------
+Episode 3000
+serial calc_performance called
+Episode 3000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.79
+-----------------------------------
+Episode 3500
+serial calc_performance called
+Episode 3500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.81
+-----------------------------------
+Episode 4000
+serial calc_performance called
+Episode 4000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 4500
+serial calc_performance called
+Episode 4500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.81
+-----------------------------------
+Episode 5000
+serial calc_performance called
+Episode 5000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 5500
+serial calc_performance called
+Episode 5500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 6000
+serial calc_performance called
+Episode 6000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 6500
+serial calc_performance called
+Episode 6500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 7000
+serial calc_performance called
+Episode 7000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 7500
+serial calc_performance called
+Episode 7500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 8000
+serial calc_performance called
+Episode 8000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 8500
+serial calc_performance called
+Episode 8500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 9000
+serial calc_performance called
+Episode 9000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 9500
+serial calc_performance called
+Episode 9500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 10000
+serial calc_performance called
+Episode 10000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 10500
+serial calc_performance called
+Episode 10500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 11000
+serial calc_performance called
+Episode 11000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 11500
+serial calc_performance called
+Episode 11500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 12000
+serial calc_performance called
+Episode 12000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 12500
+serial calc_performance called
+Episode 12500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 13000
+serial calc_performance called
+Episode 13000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 13500
+serial calc_performance called
+Episode 13500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 14000
+serial calc_performance called
+Episode 14000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 14500
+serial calc_performance called
+Episode 14500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 15000
+serial calc_performance called
+Episode 15000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 15500
+serial calc_performance called
+Episode 15500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 16000
+serial calc_performance called
+Episode 16000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 16500
+serial calc_performance called
+Episode 16500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 17000
+serial calc_performance called
+Episode 17000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 17500
+serial calc_performance called
+Episode 17500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 18000
+serial calc_performance called
+Episode 18000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 18500
+serial calc_performance called
+Episode 18500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 19000
+serial calc_performance called
+Episode 19000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 19500
+serial calc_performance called
+Episode 19500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 20000
+serial calc_performance called
+Episode 20000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 20500
+serial calc_performance called
+Episode 20500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 21000
+serial calc_performance called
+Episode 21000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 21500
+serial calc_performance called
+Episode 21500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 22000
+serial calc_performance called
+Episode 22000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 22500
+serial calc_performance called
+Episode 22500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 23000
+serial calc_performance called
+Episode 23000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 23500
+serial calc_performance called
+Episode 23500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 24000
+serial calc_performance called
+Episode 24000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 24500
+serial calc_performance called
+Episode 24500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 25000
+serial calc_performance called
+Episode 25000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 25500
+serial calc_performance called
+Episode 25500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 26000
+serial calc_performance called
+Episode 26000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 26500
+serial calc_performance called
+Episode 26500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 27000
+serial calc_performance called
+Episode 27000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 27500
+serial calc_performance called
+Episode 27500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 28000
+serial calc_performance called
+Episode 28000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 28500
+serial calc_performance called
+Episode 28500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.94
+-----------------------------------
+Episode 29000
+serial calc_performance called
+Episode 29000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.92
+-----------------------------------
+Episode 29500
+serial calc_performance called
+Episode 29500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.92
+-----------------------------------
+Episode 30000
+serial calc_performance called
+Episode 30000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.92
+-----------------------------------
+best Policy network found at episode 28500
+Training completed.
+Tuneset 1, Iteration 7: [1.93597735 1.92198214 1.91997279 1.91804957 1.90414285 1.90352162
+ 1.90114235 1.90057282 1.89370332 1.88774359 1.88598679 1.87659267
+ 1.8763531  1.87306854 1.87144903 1.86703073 1.86013908 1.85700154
+ 1.85335918 1.85089496 1.85046667 1.85018795 1.85002583 1.84940991
+ 1.84928098 1.84683603 1.84654516 1.84528913 1.84406387 1.8433847
+ 1.84185795 1.84160754 1.84107848 1.84095012 1.8399789  1.83940354
+ 1.83926445 1.8389096  1.83670779 1.83668475 1.83637564 1.83552559
+ 1.83405243 1.83351847 1.82956431 1.82623022 1.82507472 1.8234261
+ 1.82317082 1.82161353 1.81794775 1.81786876 1.80966308 1.80504992
+ 1.7866307  1.78550816 1.78506104 1.73852428 1.70512621 1.68575837]
+-------------------------------------------------------
+--------------------------------------------------------
+Using cpu device
+paramID: 4, iteration: 8, seed: 399277
+env: pprdyn1
+device: cpu
+state size: 8, action size: 231
+actor: hidden num: 3, hidden size: [32, 64, 32]
+critic: hidden num: 2, hidden size: [256, 256]
+actor lr: 0.0005, actor lr decay rate: 1.0, actor min lr: -inf
+critic lr: 0.0003, critic lr decay rate: 1.0, critic min lr: -inf
+standardize: True
+gamma: 0.999, gae_lambda: 0.95
+advantage normalization: True
+KL stopping: True, target KL: 0.02
+c1: 0.5, c2: 0.001, entropy_loss_included: True, policy_clip: 0.2
+rollout length: 512, minibatch size: 64, n_epochs: 12
+evaluation interval: 500, performance sampleN: 1000, parallel testing: False, deterministic eval: False
+max steps: 10, episodenum: 30000
+Episode 500
+serial calc_performance called
+Episode 500, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.69
+-----------------------------------
+Episode 1000
+serial calc_performance called
+Episode 1000, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.70
+-----------------------------------
+Episode 1500
+serial calc_performance called
+Episode 1500, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.74
+-----------------------------------
+Episode 2000
+serial calc_performance called
+Episode 2000, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.77
+-----------------------------------
+Episode 2500
+serial calc_performance called
+Episode 2500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.79
+-----------------------------------
+Episode 3000
+serial calc_performance called
+Episode 3000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 3500
+serial calc_performance called
+Episode 3500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.80
+-----------------------------------
+Episode 4000
+serial calc_performance called
+Episode 4000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 4500
+serial calc_performance called
+Episode 4500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 5000
+serial calc_performance called
+Episode 5000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.80
+-----------------------------------
+Episode 5500
+serial calc_performance called
+Episode 5500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 6000
+serial calc_performance called
+Episode 6000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 6500
+serial calc_performance called
+Episode 6500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 7000
+serial calc_performance called
+Episode 7000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.80
+-----------------------------------
+Episode 7500
+serial calc_performance called
+Episode 7500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 8000
+serial calc_performance called
+Episode 8000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 8500
+serial calc_performance called
+Episode 8500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 9000
+serial calc_performance called
+Episode 9000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 9500
+serial calc_performance called
+Episode 9500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 10000
+serial calc_performance called
+Episode 10000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 10500
+serial calc_performance called
+Episode 10500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 11000
+serial calc_performance called
+Episode 11000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 11500
+serial calc_performance called
+Episode 11500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 12000
+serial calc_performance called
+Episode 12000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 12500
+serial calc_performance called
+Episode 12500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 13000
+serial calc_performance called
+Episode 13000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 13500
+serial calc_performance called
+Episode 13500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 14000
+serial calc_performance called
+Episode 14000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 14500
+serial calc_performance called
+Episode 14500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 15000
+serial calc_performance called
+Episode 15000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 15500
+serial calc_performance called
+Episode 15500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 16000
+serial calc_performance called
+Episode 16000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 16500
+serial calc_performance called
+Episode 16500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 17000
+serial calc_performance called
+Episode 17000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 17500
+serial calc_performance called
+Episode 17500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 18000
+serial calc_performance called
+Episode 18000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 18500
+serial calc_performance called
+Episode 18500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 19000
+serial calc_performance called
+Episode 19000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 19500
+serial calc_performance called
+Episode 19500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 20000
+serial calc_performance called
+Episode 20000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 20500
+serial calc_performance called
+Episode 20500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 21000
+serial calc_performance called
+Episode 21000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 21500
+serial calc_performance called
+Episode 21500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 22000
+serial calc_performance called
+Episode 22000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 22500
+serial calc_performance called
+Episode 22500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 23000
+serial calc_performance called
+Episode 23000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 23500
+serial calc_performance called
+Episode 23500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.81
+-----------------------------------
+Episode 24000
+serial calc_performance called
+Episode 24000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 24500
+serial calc_performance called
+Episode 24500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 25000
+serial calc_performance called
+Episode 25000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 25500
+serial calc_performance called
+Episode 25500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 26000
+serial calc_performance called
+Episode 26000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 26500
+serial calc_performance called
+Episode 26500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 27000
+serial calc_performance called
+Episode 27000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 27500
+serial calc_performance called
+Episode 27500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 28000
+serial calc_performance called
+Episode 28000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 28500
+serial calc_performance called
+Episode 28500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 29000
+serial calc_performance called
+Episode 29000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 29500
+serial calc_performance called
+Episode 29500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 30000
+serial calc_performance called
+Episode 30000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+best Policy network found at episode 26000
+Training completed.
+Tuneset 1, Iteration 8: [1.85235104 1.85103946 1.85102458 1.85057407 1.84743254 1.84732662
+ 1.84585101 1.84531404 1.84394079 1.84340802 1.84316313 1.84292138
+ 1.84291032 1.84246415 1.84226886 1.84090018 1.8405697  1.84053989
+ 1.83985194 1.83921767 1.83819259 1.83650909 1.83550353 1.8354602
+ 1.83477085 1.83328615 1.83162602 1.83158357 1.8314835  1.83094019
+ 1.8302929  1.82971205 1.82970843 1.82871986 1.82703833 1.82698618
+ 1.826712   1.82631535 1.82611464 1.82608267 1.82510698 1.82480639
+ 1.8242483  1.82306954 1.82211303 1.82115027 1.82108735 1.81917808
+ 1.81731895 1.81676395 1.81655923 1.8135148  1.8049361  1.80350153
+ 1.79972716 1.79428379 1.77204137 1.73983893 1.69968053 1.69245273]
+-------------------------------------------------------
+--------------------------------------------------------
+Using cpu device
+paramID: 4, iteration: 9, seed: 517359
+env: pprdyn1
+device: cpu
+state size: 8, action size: 231
+actor: hidden num: 3, hidden size: [32, 64, 32]
+critic: hidden num: 2, hidden size: [256, 256]
+actor lr: 0.0005, actor lr decay rate: 1.0, actor min lr: -inf
+critic lr: 0.0003, critic lr decay rate: 1.0, critic min lr: -inf
+standardize: True
+gamma: 0.999, gae_lambda: 0.95
+advantage normalization: True
+KL stopping: True, target KL: 0.02
+c1: 0.5, c2: 0.001, entropy_loss_included: True, policy_clip: 0.2
+rollout length: 512, minibatch size: 64, n_epochs: 12
+evaluation interval: 500, performance sampleN: 1000, parallel testing: False, deterministic eval: False
+max steps: 10, episodenum: 30000
+Episode 500
+serial calc_performance called
+Episode 500, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.71
+-----------------------------------
+Episode 1000
+serial calc_performance called
+Episode 1000, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.71
+-----------------------------------
+Episode 1500
+serial calc_performance called
+Episode 1500, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.71
+-----------------------------------
+Episode 2000
+serial calc_performance called
+Episode 2000, Learning Rate: A0.0005/C0.0003 Avg Performance: 1.73
+-----------------------------------
+Episode 2500
+serial calc_performance called
+Episode 2500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.75
+-----------------------------------
+Episode 3000
+serial calc_performance called
+Episode 3000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.79
+-----------------------------------
+Episode 3500
+serial calc_performance called
+Episode 3500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.81
+-----------------------------------
+Episode 4000
+serial calc_performance called
+Episode 4000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 4500
+serial calc_performance called
+Episode 4500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.81
+-----------------------------------
+Episode 5000
+serial calc_performance called
+Episode 5000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 5500
+serial calc_performance called
+Episode 5500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 6000
+serial calc_performance called
+Episode 6000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 6500
+serial calc_performance called
+Episode 6500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.82
+-----------------------------------
+Episode 7000
+serial calc_performance called
+Episode 7000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 7500
+serial calc_performance called
+Episode 7500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 8000
+serial calc_performance called
+Episode 8000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 8500
+serial calc_performance called
+Episode 8500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.83
+-----------------------------------
+Episode 9000
+serial calc_performance called
+Episode 9000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.84
+-----------------------------------
+Episode 9500
+serial calc_performance called
+Episode 9500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 10000
+serial calc_performance called
+Episode 10000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 10500
+serial calc_performance called
+Episode 10500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 11000
+serial calc_performance called
+Episode 11000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 11500
+serial calc_performance called
+Episode 11500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 12000
+serial calc_performance called
+Episode 12000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 12500
+serial calc_performance called
+Episode 12500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 13000
+serial calc_performance called
+Episode 13000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 13500
+serial calc_performance called
+Episode 13500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 14000
+serial calc_performance called
+Episode 14000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 14500
+serial calc_performance called
+Episode 14500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 15000
+serial calc_performance called
+Episode 15000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 15500
+serial calc_performance called
+Episode 15500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 16000
+serial calc_performance called
+Episode 16000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.86
+-----------------------------------
+Episode 16500
+serial calc_performance called
+Episode 16500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.85
+-----------------------------------
+Episode 17000
+serial calc_performance called
+Episode 17000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 17500
+serial calc_performance called
+Episode 17500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 18000
+serial calc_performance called
+Episode 18000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 18500
+serial calc_performance called
+Episode 18500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 19000
+serial calc_performance called
+Episode 19000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.89
+-----------------------------------
+Episode 19500
+serial calc_performance called
+Episode 19500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.88
+-----------------------------------
+Episode 20000
+serial calc_performance called
+Episode 20000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.87
+-----------------------------------
+Episode 20500
+serial calc_performance called
+Episode 20500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 21000
+serial calc_performance called
+Episode 21000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 21500
+serial calc_performance called
+Episode 21500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 22000
+serial calc_performance called
+Episode 22000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.90
+-----------------------------------
+Episode 22500
+serial calc_performance called
+Episode 22500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 23000
+serial calc_performance called
+Episode 23000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.92
+-----------------------------------
+Episode 23500
+serial calc_performance called
+Episode 23500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.92
+-----------------------------------
+Episode 24000
+serial calc_performance called
+Episode 24000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 24500
+serial calc_performance called
+Episode 24500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 25000
+serial calc_performance called
+Episode 25000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.93
+-----------------------------------
+Episode 25500
+serial calc_performance called
+Episode 25500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.92
+-----------------------------------
+Episode 26000
+serial calc_performance called
+Episode 26000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 26500
+serial calc_performance called
+Episode 26500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.93
+-----------------------------------
+Episode 27000
+serial calc_performance called
+Episode 27000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.92
+-----------------------------------
+Episode 27500
+serial calc_performance called
+Episode 27500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.92
+-----------------------------------
+Episode 28000
+serial calc_performance called
+Episode 28000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.92
+-----------------------------------
+Episode 28500
+serial calc_performance called
+Episode 28500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.93
+-----------------------------------
+Episode 29000
+serial calc_performance called
+Episode 29000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 29500
+serial calc_performance called
+Episode 29500, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.91
+-----------------------------------
+Episode 30000
+serial calc_performance called
+Episode 30000, Learning Rate: A0.000167/C0.0001 Avg Performance: 1.93
+-----------------------------------
+best Policy network found at episode 25000
+Training completed.
+Tuneset 1, Iteration 9: [1.93486304 1.9310635  1.92847227 1.92578251 1.9214238  1.92081388
+ 1.9203759  1.9199401  1.91895743 1.91757637 1.91329234 1.91191121
+ 1.91015364 1.9090754  1.90814828 1.90679287 1.90615934 1.90025662
+ 1.89957916 1.896914   1.89571573 1.88707368 1.88139826 1.88137005
+ 1.88044818 1.87806285 1.87755664 1.87635832 1.87627062 1.87579464
+ 1.87458718 1.87427317 1.86944805 1.86697331 1.86627903 1.86415905
+ 1.86350806 1.86254886 1.85986167 1.85911038 1.85467449 1.85310815
+ 1.8485993  1.84582079 1.84539728 1.8429278  1.84280106 1.83396561
+ 1.82883765 1.82806776 1.8241147  1.81764695 1.80764758 1.80549656
+ 1.79247422 1.74945651 1.73146755 1.71295236 1.70727633 1.70635352]
+seed  best_score
+3  857338    1.980399
+5  702204    1.958543
+6  357404    1.955156
+0  518785    1.952062
+7  296238    1.935977
+9  517359    1.934863
+1  508759    1.931389
+2  827120    1.907677
+4   10673    1.901798
+8  399277    1.852351

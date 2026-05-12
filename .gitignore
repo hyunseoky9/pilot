@@ -2,3 +2,4 @@ notes/
 *.npy
 *.pkl
 *.pyc
+PPO_results/
