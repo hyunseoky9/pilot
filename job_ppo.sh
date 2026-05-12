@@ -1,24 +1,19 @@
 #!/bin/bash
-# ---------------------------------------------
-# Usage: ./run_PPO2.sh <paramID>
-# Example: ./run_PPO2.sh 57
-# ---------------------------------------------
 
-PARAM_ID=$1
+#SBATCH --job-name=PPO      ## Name of the job
+#SBATCH --time=24:00:00           ## Job Duration
+#SBATCH --ntasks=1             ## Number of tasks (analyses) to run
+#SBATCH --cpus-per-task=8      ## The number of threads the code will use
+#SBATCH --mem-per-cpu=2G     ## Real memory(MB) per CPU required by the job.
+ARG=${1:-1}
+LOGFILE="zztrainPPO_${ARG}_${SLURM_JOB_ID}.log"
+exec >"$LOGFILE" 2>&1              # send all output (stdout+stderr) to the log
 
-# Generate a random session ID between 0 and 100000
-SESSION_ID=$(( RANDOM % 100001 ))
-SESSION_NAME="${SESSION_ID}_${PARAM_ID}_PPO2"
-LOGFILE="zztrainPPO2_${PARAM_ID}_${SESSION_ID}.log"
+## not using the default python
+module purge
 
-echo "Launching PPO2 training:"
-echo "  paramID: ${PARAM_ID}"
-echo "  tmux session: ${SESSION_NAME}"
-echo "  log file: ${LOGFILE}"
+## Execute the python script and pass the argument/input '90'
+source ~/miniconda3/bin/activate hatchery
+export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK:-1}
 
-# Start tmux session
-tmux new-session -d -s "$SESSION_NAME" "source ~/miniconda3/bin/activate hatchery && cd ~/AIinterpretability && python -u PPO2_metapop1_HPC.py ${PARAM_ID} 2>&1 | tee -a ${LOGFILE}"
-
-echo "Training started in tmux session '${SESSION_NAME}'."
-echo "To attach:   tmux attach -t ${SESSION_NAME}"
-echo "To view log: tail -f ${LOGFILE}"
+srun python PPO_pprdyn1_HPC.py "$ARG"
