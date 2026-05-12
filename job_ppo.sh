@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#SBATCH --account=hyuny
 #SBATCH --job-name=PPO      ## Name of the job
 #SBATCH --time=24:00:00           ## Job Duration
 #SBATCH --ntasks=1             ## Number of tasks (analyses) to run
